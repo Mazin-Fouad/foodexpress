@@ -1,0 +1,496 @@
+/* Start Global Rules */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.dialog {
+  z-index: 9999;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-60%, -50%);
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width: 70vh;
+  height: 30vh;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.dialog h2,
+.dialog h3 {
+  margin-bottom: 10px;
+}
+
+.dialog button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  background-color: #0953bd;
+  color: #fff;
+}
+/* End Global Rules */
+/* Start Header Styling */
+
+header {
+  background-color: #f86600;
+  display: flex;
+  padding: 20px;
+  height: 12vh;
+}
+
+.header-container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address {
+  color: #ffffff;
+  text-decoration: underline;
+  line-height: 1.4;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.flag {
+  margin-right: 10px;
+  height: 45px;
+  border: 4px solid #ffff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.header-logo,
+.menu {
+  cursor: pointer;
+}
+
+/* End Header Styling */
+
+section {
+  display: flex;
+}
+/* Start Styling left section */
+
+.left-section {
+  width: 80vw;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.banner-container {
+  position: relative;
+  width: 100%;
+}
+
+.banner-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.restaurant-logo {
+  cursor: pointer;
+  position: absolute;
+  bottom: -35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  object-fit: cover;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border-radius: 50%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.restaurant-description {
+  margin-top: 50px;
+  margin-left: auto;
+  padding-left: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-box {
+  margin-top: -30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rating-stars {
+  width: 80px;
+}
+
+.rating-link {
+  padding-left: 5px;
+  color: #f86600;
+}
+
+.shipping-info span > img {
+  width: 20px;
+  margin: 5px;
+}
+
+.shipping-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: -28px;
+  margin-left: -16px;
+}
+
+.shipping-info > span {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.text-newsletter {
+  padding: 10px;
+}
+
+.text-newsletter > p {
+  font-size: 14px;
+  color: #666;
+}
+
+.text-newsletter p:nth-child(2) {
+  margin-top: 10px;
+}
+
+.favorite-dishes-headline {
+  margin-top: 5px;
+  padding-left: 10%;
+  padding-right: 14%;
+}
+
+.favorite-dishes-headline h3 {
+  background-color: #f8f5f2;
+  padding: 20px;
+}
+
+#favorite-pizza {
+  padding-left: 10%;
+  padding-right: 14%;
+  margin-top: 10px;
+}
+
+.menu-box {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.add-icon {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border: 1px solid rgba(213, 195, 195, 0.87);
+  transition: 0.3s ease-in-out;
+}
+
+.add-icon:hover {
+  border: 1px solid black;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+
+.note {
+  font-size: 14px;
+}
+
+.price {
+  margin-top: 20px;
+}
+/* End Styling left section */
+/* Start Styling Basket Section */
+
+.basket-section {
+  width: 20vw;
+  height: 100vh;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  position: sticky;
+  top: 0;
+  right: 0;
+  transition: all 225ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.basket-section h3 {
+  margin-top: 20px;
+  border-bottom: solid 1px gainsboro;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.bag-icon {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
+
+#basket-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#basket-info h4 {
+  margin-top: 20px;
+}
+
+#basket-info p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(171, 171, 171);
+}
+
+.add-remove img {
+  height: 18px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#order-view {
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.menu-added-to-basket {
+  padding: 8px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-added-to-basket h4 {
+  color: #666;
+}
+.add-remove a {
+  font-size: 14px;
+  color: blue;
+}
+
+.add-remove {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.food-amount {
+  display: flex;
+  gap: 5px;
+  color: #666;
+}
+
+.basket-price {
+  color: #666;
+}
+
+#final-sum-container {
+  width: 100%;
+  padding: 20px;
+}
+.sum,
+.delivery-costs,
+.final-sum {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #666;
+  padding: 5px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.button button {
+  cursor: pointer;
+  width: 90%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border: none;
+  background-color: #0953bd;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+/* End Styling Basket Section */
+
+/* Start Styling Impressum */
+.imprint {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-left: 8%;
+  /* margin-top: 10px; */
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+/* Start Footer Style */
+footer {
+  background-color: #0a3847;
+  padding: 40px;
+}
+
+.links {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.links a {
+  color: #fff;
+  margin-right: 15px;
+}
+
+.icons-info {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.icons-info a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.copyright {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+}
+/* End Footer Style */
+
+/******* Media Queries *******/
+
+/* Start Media for Header Section */
+@media only screen and (min-width: 200px) and (max-width: 470px) {
+  header {
+    width: 100%;
+    height: 30vh;
+  }
+  .header-container {
+    flex-direction: column;
+    margin-top: -25px;
+  }
+  .address {
+    margin-top: -55px;
+  }
+}
+/* End Media for Header Section */
+
+/* Start Media For Left Section */
+
+@media only screen and (min-width: 200px) and (max-width: 1270px) {
+  section {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+  .left-section {
+    width: 100vw;
+  }
+  .basket-section {
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 270px) and (max-width: 470px) {
+  .restaurant-description {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    margin-right: 38px;
+  }
+
+  .rating-box {
+    flex-direction: column;
+    padding-left: unset;
+  }
+  .rating-box a {
+    margin-top: -32px;
+  }
+  .text-newsletter p {
+    width: 100%;
+    text-align: center;
+  }
+  .shipping-info {
+    flex-direction: column;
+    margin-top: 5px;
+  }
+  .shipping-info > span {
+    padding: 2px;
+  }
+  .links {
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  .links a {
+    text-decoration: none;
+    margin: 10px;
+  }
+  .dialog {
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85vw;
+  }
+}
+/* End Media for left Section */

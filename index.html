@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style File -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS Style File -->
+    <!-- Goolge Foonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Goolge Fonts -->
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Favicon -->
+    <!-- Cookies -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>#cookiebanner_con *{font-family:'Source Sans Pro',sans-serif}</style>
+    <!-- Cookies -->
+    <title>Food Express</title>
+</head>
+
+<body onload="renderFavoritePizza()">
+    <header>
+        <div class="header-container">
+
+            <img src="./imgs/food-express.png" class="header-logo">
+
+            <h3 class="address">Bismarck Str. 50 <br> 76646 Bruchsal</h3>
+
+            <div class="menu">
+                <img src="./imgs/germany-flag.png" class="flag">
+                <img src="./imgs/menu-4-32.ico" class="menu-icon">
+            </div>
+
+        </div>
+    </header>
+
+    <section>
+        <div class="left-section">
+            <div class="banner-container">
+                <img src="./imgs/banner.jpg" class="banner-image">
+                <img src="./imgs/Pizzotta.jpg" class="restaurant-logo">
+            </div>
+
+            <div class="restaurant-description">
+                <h3>PIZZOTTA</h3>
+                <div class="rating-box">
+                    <Span><img src="./icons/rating.png" class="rating-stars"></Span>
+                    <a href="#" class="rating-link">(1.4k Bewertungen)</a>
+                </div>
+                <div class="shipping-info">
+                    <span><img src="./icons/clock.png" alt="">20-45 min</span>
+                    <span><img src="./icons/delivery-bike.png">0,50 €</span>
+                    <span><img src="./icons/shopping-bag.png" ></a>Min. 8 €</span>
+                </div>
+                <div class="text-newsletter">
+                    <p>Bei diesem Restaurant kannst du Punkte sammeln. Stelle beim Bestellabschluss bitte sicher, dass du dich für unseren Newsletter angemeldet hast, um deine Punkte per E-Mail zu erhalten.</p> <br>
+                    <p>Genießen Sie unsere italienische Spezialitäten. Pizza, Pasta und Vieles mehr! Wir freuen uns auf Ihre Bestellung!</p>
+                </div>
+            </div>
+            <div class="favorite-dishes-headline">
+                <h3>Beliebte Gerichte</h3>
+            </div>
+
+            <div id="favorite-pizza"></div>
+            <div id="price-calculation"></div>
+        </div>
+
+
+        <aside class="basket-section">
+            <h3>Warenkorb</h3>
+
+            <div id="basket-info" class="d-none">
+                <img src="./icons/shopping-bag.png" class="bag-icon">
+                <h4>Fülle deinen Warenkorb </h4>
+                <p>Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</p>
+            </div>
+
+            <div id="order-view" class="d-none"></div>
+            <div id="final-sum-container" class="d-none"></div>
+        </aside>
+
+    </section>
+
+    <section class="imprint">
+      
+            <h2>Impressum</h2>
+            <br>
+            Pizzeria Pizzotta Bruchsal<br>
+            Gesetzlicher Vertreter: Mazin Fouad<br><br>
+            <a href="mailto: kontakt@pizzotta.de">kontakt@pizzotta.de</a><br>
+            Unternehmensregister: Karlsruhe<br>
+
+            Plattform der EU-Kommission zur Online-Streitbeilegung:
+            <a href="https://ec.europa.eu/consumers/odr">https://ec.europa.eu/consumers/odr</a>
+    </section>
+    <div class="dialog d-none" id="dialog">
+        <h2>Vielen Dank!</h2>
+        <h3>Wir haben Ihre Bestellung empfangen</h3>
+        <button onclick="closePopUp()">Schließen</button>    
+    </div>
+<footer>
+    <div class="links">
+        <a href="#">Restaurant empfehlen</a>
+        <a href="#"> Restaurant anmelden</a>
+        <a href="#"> Restaurant abmelden</a>
+        <a href="#">AGB</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">Impressum</a>
+    </div>
+<div class="icons-info">Alle Icons von &nbsp; <a href="https://www.flaticon.com/">Flaticons</a></div>
+<div class="copyright">&copy; 2022 food-express.de</div>
+</footer>
+    <script src="./script.js"></script>
+    <style>#cookiebanner_con *{box-sizing:border-box!important}.cookiebanner{position:fixed;padding-bottom:5px;background-color:#fff;box-shadow:0 1px 4px rgba(10,10,10,.4);z-index:1600000000;overflow:auto}.cb_top .cookiebanner{top:0;left:0;width:100%;padding-bottom:5px}.cb_center .cookiebanner{top:30%;left:20%;width:60%;padding:2.5% 8px}.cb_bottom .cookiebanner{bottom:0;left:0;width:100%;padding-bottom:5px}.cb_ecke .cookiebanner{width:640px;max-height:400px;padding:18px;overflow:auto}.cookiebanner a{text-decoration:none!important}.cBanner{width:100%}.cb_bottom .cBanner,.cb_top .cBanner{padding-left:4px;padding-right:4px}.cBanner::after{content:"";display:table;clear:both}.link_banner{color:#5a6e8c;text-decoration:none!important}.link_banner:hover{color:#0096c8;text-decoration:underline!important}.button_einverstanden{margin-bottom:8px;color:#fff!important;border-width:0;border-radius:10px}.button_einverstanden:hover,.button_nein:hover{cursor:pointer;opacity:.9}.button_nein{padding:1px 6px;font-size:13.3333px;background-color:#fff0!important;border-width:0}.button_nein:hover{text-decoration:underline!important}.co_wieder{position:fixed;padding:2px;background-color:#fff;border:0;z-index:1500000000;display:none}.co_wieder:hover{cursor:pointer}.co_wieder_left_top{top:0;left:0;border-bottom-right-radius:5px}.co_wieder_right_top{top:0;right:0;border-bottom-left-radius:5px}.co_wieder_left_bottom{left:0;bottom:0;border-top-right-radius:5px}.co_wieder_right_bottom{right:0;bottom:0;border-top-left-radius:5px}.coo_logo{float:right;margin:0 20px 0 0;padding:0}.coo_links{float:left;min-height:1px;min-width:100px;font-size:12px}.coo_links img{height:50px;max-width:100px;margin-bottom:5px}.cb_link_con{width:100%;margin-top:10px;margin-bottom:3px;text-align:center}.cBG{position:fixed;top:0;left:0;height:100%;width:100%;background-color:rgba(0,0,0,.2);z-index:1400000000}.cb_bottom .cBG,.cb_ecke .cBG,.cb_top .cBG{display:none}.cb_center .cBG{display:block}.sl_checkboxen{margin:0!important}.cb_checkbox_active:hover{cursor:pointer}.cb_checkbox_disabled:hover{cursor:not-allowed}.schalter_con label{margin-right:20px;padding-left:8px;font-size:13px;font-weight:700}.cb_label_active:hover{cursor:pointer}.cb_label_disabled{color:rgba(0,0,0,.7)!important}.cb_label_disabled:hover,.slSwitchReadonly:hover{cursor:not-allowed}.slSwitchConS{position:relative;height:34px;width:120px;display:inline-block}.slSwitchClickable:hover{cursor:pointer}.slSwBar,.slSwTitel{position:absolute;height:14px}.slSwTitel{top:0;left:0;width:100%;font-size:12px;text-align:center;overflow:hidden}.slSwitchReadonly .slSwTitel{color:rgba(0,0,0,.7)!important}.slSwitchClickable .slSwTitel{color:#000!important;font-weight:700!important}.slSwBar{top:20px;left:42px;width:36px;background-color:#dcdcdc;border-radius:8px}.slSwPkt{position:absolute;top:17px;height:20px;width:20px;border-radius:50%;transition:all .5s ease-in-out}.slSwitchInaktiv .slSwPkt{background-color:#646464}.slSwitchReadonly .slSwPkt{opacity:.7}.slSwitchConS.slSwitchInaktiv .slSwPkt{left:42px}.slSwitchClickable.slSwitchInaktiv:hover .slSwPkt{box-shadow:0 0 10px #009632}.slSwitchAktiv .slSwPkt{background-color:#009632}.slSwitchConS.slSwitchAktiv .slSwPkt{left:58px}.slSwitchClickable.slSwitchAktiv:hover .slSwPkt{box-shadow:0 0 10px #000}@media only screen and (min-width:1200px){.cbMobOnly{display:none}.cb_ecke .text_banner{float:none}.cb_bottom .text_banner,.cb_center .text_banner,.cb_top .text_banner{float:left}.cb_ecke .buttons_banner{padding-top:10px}.cb_ecke .button_nein{margin-left:24px}.cb_bottom .button_nein,.cb_top .button_nein{margin-left:18px}.text_banner{margin:12px 0}.cb_bottom .text_banner,.cb_top .text_banner{width:calc(100% - 515px)}.cb_center .text_banner{width:calc(100% - 350px)}.buttons_banner{float:left;padding-bottom:1%}.cb_bottom .buttons_banner,.cb_top .buttons_banner{margin-left:8px;width:390px}.cb_center .buttons_banner{width:240px;margin-left:8px}.button_einverstanden{padding:.75em 1.25em;font-size:16px}.button_nein{font-size:13px}.cb_center .button_nein{margin-top:16px;padding:0}.cb_center .buttons_banner,.cb_center .coo_links{margin-top:10px}.cb_bottom .schalter_con,.cb_top .schalter_con{margin-left:140px}.cb_center .schalter_con{margin-left:100px}}@media only screen and (max-width:1199px){.coo_links{min-height:54px;width:100%}.cb_center .coo_links{position:absolute;top:5px;left:50px}.cb_link{position:absolute;top:20px;left:calc(50% - 53px);font-size:16px}.cb_mobile_bottom .cookiebanner,.cb_mobile_top .cookiebanner{left:0!important;max-height:none;width:100%!important;padding-bottom:5px!important}.cb_mobile_top .cookiebanner{top:0!important;bottom:auto!important}.cb_center .cookiebanner,.cb_mobile_center .cookiebanner{top:5%!important;left:5%!important;max-height:90%!important;width:90%!important}.cb_mobile_bottom .cookiebanner{top:auto!important;bottom:0!important}.cb_center .cBanner{margin-top:48px}.coo_img_text{float:left;width:100%;padding:12px}.text_banner{width:100%;overflow-y:auto}.cb_bottom .text_banner,.cb_top .text_banner{max-height:calc(100vh - 130px)}.cb_center .text_banner{max-height:calc(80vh - 270px)}.buttons_banner{float:left;width:100%;padding-top:20px;padding-bottom:10px}.button_einverstanden{float:right;padding:calc(1em/3*2) .5em;font-size:18px}.cb_bottom .button_einverstanden,.cb_top .button_einverstanden{margin-right:4px}@media only screen and (max-width:499px){.cb_center .button_einverstanden{float:left!important}.cb_center .button_nein{margin-top:6px}}.button_nein{float:left;width:120px;margin:4px 0 12px;padding:0;font-size:14px}.cb_bestaetigen .button_nein,.cb_janein .button_nein{display:block}.cb_okay .button_nein{display:none}.coo_logo{float:left;margin:0 0 0 10px;padding:0}.coo_logo img{float:left;width:48px}.slSwitchConS{margin:10px 0}}</style><div id=cookiebanner_con class="cb_bottom cb_janein cb_checkbox"><div id=cookiebanner class=cookiebanner style="background-color:#fff;"><h3 class=cb_link_con><a class=cb_link href=https://www.smartlife-online.de/cb/ title="Cookie Banner Generator | DSGVO Konform" target=_blank style="color:#009632">Cookie Banner</a></h3><div class=cBanner><div class=coo_img_text><div class=coo_links><a class=coo_logo href=https://www.smartlife-online.de/?lk=100004232 title="Zur Homepage von Smartlife - Online" target=_blank><img alt="Logo von Smartlife - Online" src=https://www.smartlife-online.de/bilder/sl_logo.png></a></div><div class=text_banner style="color:#5a6e8c;font-size:14px">Damit wir unsere Webseiten für Sie optimieren und personalisieren können würden wir gerne Cookies verwenden. Zudem werden Cookies gebraucht, um Funktionen von Soziale Media Plattformen anbieten zu können, Zugriffe auf unsere Webseiten zu analysieren und Informationen zur Verwendung unserer Webseiten an unsere Partner in den Bereichen der sozialen Medien, Anzeigen und Analysen weiterzugeben. Sind Sie widerruflich mit der Nutzung von Cookies auf unseren Webseiten einverstanden?(<a href=mazin-fouad.developerakademie.net/food_express class=link_banner target=_blank style="color:#1a0dab">mehr dazu</a>)</div></div><div class=buttons_banner><button class=button_einverstanden onclick=cookiesAktivieren(!0) style="background-color:#009632"><b>Alle akzeptieren</b></button><button class=button_nein onclick=cookiesAktivieren(!1) style="color:#96aabe"><b>Ausgewählte akzeptieren</b></button></div></div><div class=schalter_con></div></div><div id=co_wieder class="co_wieder co_wieder_right_bottom" style="font-size:10px;color:#5a6e8c;background-color:#ffffff" onclick=trackingDeaktivieren()><div class=text_wieder>Cookie-Entscheidung widerrufen</div></div><div id=cBG class=cBG></div></div><script>var slcbArt=0;var slcbPosi=2;var slcbDomain="eveloperakademie.net";var slcbgtm=[];var slCookieNein=false;var slAuswahl="switch";var slIsCookie=!1;function showcb(){document.getElementById("cookiebanner").style.display="block",0!==slcbArt&&1!==slcbArt&&2!==slcbArt&&3!==slcbArt||(document.getElementById("co_wieder").style.display="none"),1===slcbPosi&&(document.getElementById("cBG").style.display="block")}function hidcb(){document.getElementById("cookiebanner").style.display="none",0!==slcbArt&&1!==slcbArt&&2!==slcbArt&&3!==slcbArt||(document.getElementById("co_wieder").style.display="block"),1===slcbPosi&&(document.getElementById("cBG").style.display="none"),"function"==typeof cb_close_einstellungen&&cb_close_einstellungen()}function cookiesAktivieren(e){if(hidcb(),e||slAuswahl){let l=!1;switch(slAuswahl){case"checkbox":l=slAusgewaehlteCheckbox(e);break;case"switch":l=slAusgewaehlteSwitch(e)}l&&(l=l.split("~")),localStorage.sl_track_cookies="ja",localStorage.sl_track_auswahl=l,slCBStartTracking(l)}else slIsCookie=!1,localStorage.sl_track_cookies="nein",localStorage.removeItem("sl_track_auswahl")}function trackingDeaktivieren(){localStorage.sl_track_cookies="widerrufen",localStorage.removeItem("sl_track_auswahl"),location.reload()}function checkSLCookies(){let e="",l=[];"string"==typeof localStorage.sl_track_cookies&&(e=localStorage.sl_track_cookies),"string"==typeof localStorage.sl_track_auswahl&&""!==localStorage.sl_track_auswahl&&(l=localStorage.sl_track_auswahl),e&&("ja"===e?(hidcb(),slCBStartTracking(l)):"nein"===e&&(slIsCookie=!1,slCookieNein&&hidcb()))}function slCBStartTracking(t){slIsCookie=!0,(t.includes(0)||t.includes("0"))&&(loadGTM(slcbgtm[0]),"function"==typeof slSkript0&&("complete"===document.readyState?slSkript0():window.addEventListener("load",slSkript0))),(t.includes(1)||t.includes("1"))&&(loadGTM(slcbgtm[1]),"function"==typeof slSkript1&&("complete"===document.readyState?slSkript1():window.addEventListener("load",slSkript1))),(t.includes(2)||t.includes("2"))&&(loadGTM(slcbgtm[2]),"function"==typeof slSkript2&&("complete"===document.readyState?slSkript2():window.addEventListener("load",slSkript2))),(t.includes(3)||t.includes("3"))&&(loadGTM(slcbgtm[3]),"function"==typeof slSkript3&&("complete"===document.readyState?slSkript3():window.addEventListener("load",slSkript3))),(t.includes(4)||t.includes("4"))&&(loadGTM(slcbgtm[4]),"function"==typeof slSkript4&&("complete"===document.readyState?slSkript4():window.addEventListener("load",slSkript4)))}function loadGTM(t){!function(t,e,s,l,n){t[l]=t[l]||[],t[l].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var i=e.getElementsByTagName(s)[0],c=e.createElement(s);c.async=!0,c.src="https://www.googletagmanager.com/gtm.js?id="+n,i.parentNode.insertBefore(c,i)}(window,document,"script","dataLayer",t)}function slAusgewaehlteCheckbox(t){const e=document.getElementsByClassName("sl_checkboxen");let s="";for(let l=0;l<e.length;l++)(t||e[l].checked)&&(""!==s&&(s+="~"),s+=l);return s}function slAusgewaehlteSwitch(t){const e=document.getElementsByClassName("slSwitchConS");let s="";for(let l=0;l<e.length;l++)(t||e[l].classList.contains("slSwitchAktiv"))&&(""!==s&&(s+="~"),s+=l);return s}function slSwitchPktEle(t){t.classList.contains("slSwitchAktiv")?(t.classList.add("slSwitchInaktiv"),t.classList.remove("slSwitchAktiv")):(t.classList.add("slSwitchAktiv"),t.classList.remove("slSwitchInaktiv"))}checkSLCookies();</script>
+</body>
+
+</html>
